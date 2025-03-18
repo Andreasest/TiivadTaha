@@ -1,0 +1,62 @@
+### Find ALl Flights
+GET http://localhost:8080/api/flights
+
+### Find Flight By ID
+GET http://localhost:8080/api/flights/2
+
+### Find Flight By ID that doesnt exist
+GET http://localhost:8080/api/flights/99
+
+
+### Create new Flight
+POST http://localhost:8080/api/flights
+Content-Type: application/json
+
+{
+  "id": 3,
+  "airline": "AirlineName",
+  "flightNumber": "AB123",
+  "departure": "2025-03-18T10:00:00",
+  "arrival": "2025-03-18T12:00:00",
+  "origin": "Tallinn",
+  "destination": "London",
+  "layovers": 1,
+  "price": 199
+}
+
+### Create new Flight with invalid dates (saabumisAeg is before väljumisAeg)
+POST http://localhost:8080/api/flights
+Content-Type: application/json
+
+{
+  "id": 3,
+  "airline": "AirlineName",
+  "flightNumber": "AB123",
+  "departure": "2025-03-18T10:00:00",
+  "arrival": "2025-02-18T12:00:00",
+  "origin": "Tallinn",
+  "destination": "London",
+  "layovers": 1,
+  "price": 199,
+  "duration": "2h"
+}
+
+### Update an existing Flight
+PUT http://localhost:8080/api/flights/3
+Content-Type: application/json
+
+{
+  "id": 3,
+  "airline": "Updated name",
+  "flightNumber": "AB123",
+  "departure": "2025-03-18T10:00:00",
+  "arrival": "2025-03-18T12:00:00",
+  "origin": "Tallinn",
+  "destination": "London",
+  "layovers": 1,
+  "price": 199,
+  "duration": "2h"
+}
+
+### Delete a Flight
+DELETE http://localhost:8080/api/flights/3

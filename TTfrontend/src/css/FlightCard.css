@@ -1,0 +1,124 @@
+.flight-card {
+  width: 100%;
+  max-width: 1000px;
+  margin: 1rem auto;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #1a1a1a;
+  transition: transform 0.2s;
+  display: flex;
+  flex-direction: column;
+}
+
+.flight-header {
+  background-color: #333;
+  padding: 1rem;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.flight-header .flight-airline {
+  font-size: 1.5rem;
+  color: white;
+}
+
+.flight-header .flight-number {
+  font-size: 1rem;
+  color: #999;
+}
+
+.flight-details {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+}
+
+.flight-info {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.flight-departure,
+.flight-arrival,
+.flight-duration {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30%;
+}
+
+.flight-departure .label,
+.flight-arrival .label,
+.flight-duration .label,
+.flight-price .label {
+  font-weight: 500;
+  color: #bbb;
+}
+
+.flight-departure .time,
+.flight-arrival .time,
+.flight-duration .duration,
+.flight-price .price {
+  font-size: 1rem;
+  color: white;
+}
+
+.flight-duration .duration {
+  font-weight: 500;
+  color: #ff4757;
+}
+
+.flight-price {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.flight-price .price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ffd700;
+}
+
+.book-button {
+  background-color: #e50914;
+  color: white;
+  padding: 1rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: auto;
+}
+
+.book-button:hover {
+  background-color: #f40612;
+}
+
+@media (max-width: 768px) {
+  .flight-card {
+    max-width: 100%;
+  }
+
+  .flight-details {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .flight-info {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .flight-departure,
+  .flight-arrival,
+  .flight-duration,
+  .flight-price {
+    width: 100%;
+    align-items: flex-start;
+  }
+}
